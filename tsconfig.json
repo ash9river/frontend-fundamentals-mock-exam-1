@@ -3,7 +3,8 @@
     "baseUrl": "src",
     "paths": {
       "@shared/*": ["shared/*/index.ts"],
-      "@domains/*": ["domains/*/index.ts"]
+      "@domains/*": ["domains/*/index.ts"],
+      "@pages/*": ["pages/*/index.ts"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

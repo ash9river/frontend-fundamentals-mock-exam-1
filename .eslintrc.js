@@ -58,7 +58,14 @@ module.exports = {
             message: '`Array.isArray`를 대신 사용해주세요!',
           },
         ],
-        patterns: ['@domains/*/internal/*', 'domains/*/internal/*', '@services/*/internal/*', 'services/*/internal/*'],
+        patterns: [
+          '@domains/*/internal/*',
+          'domains/*/internal/*',
+          '@pages/*/internal/*',
+          'pages/*/internal/*',
+          '@services/*/internal/*',
+          'services/*/internal/*',
+        ],
       },
     ],
 
