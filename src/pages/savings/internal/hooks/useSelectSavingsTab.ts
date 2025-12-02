@@ -17,6 +17,7 @@ export function useSelectSavingsTab() {
   }
 
   return {
+    tab,
     isSelectedTab,
     handleChangeTab,
   };
