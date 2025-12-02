@@ -1,6 +1,6 @@
 import { useSelectSavingsTab } from '../../hooks/useSelectSavingsTab';
-import { SavingsProductTabContent } from './SavingsProductTabContent';
-import { SavingsResultTabContent } from './SavingsResultTabContent';
+import { SavingsProductTabContent } from './content/SavingsProductTabContent';
+import { SavingsResultTabContent } from './content/SavingsResultTabContent';
 
 type ProductProps = React.ComponentProps<typeof SavingsProductTabContent>;
 type ResultProps = React.ComponentProps<typeof SavingsResultTabContent>;

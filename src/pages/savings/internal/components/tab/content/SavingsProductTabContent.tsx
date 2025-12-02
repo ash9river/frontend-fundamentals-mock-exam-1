@@ -1,7 +1,7 @@
 import { QUERY_OPTIONS } from '@shared/queries';
 import { useQuery } from '@tanstack/react-query';
-import { SavingsListItem } from '../list/SavingsListItem';
-import { useSelectSavings } from '../../hooks/useSelectSavings';
+import { SavingsListItem } from '../../list/SavingsListItem';
+import { useSelectSavings } from '../../../hooks/useSelectSavings';
 
 type Props = Pick<ReturnType<typeof useSelectSavings>, 'isSelectedSavings' | 'handleSelectSavings'>;
 

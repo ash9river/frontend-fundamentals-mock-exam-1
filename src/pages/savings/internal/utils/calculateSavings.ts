@@ -3,10 +3,10 @@ import { useChangeSavingsForm } from '../hooks/useChangeSavingsForm';
 
 type Props = {
   savingsFormState: ReturnType<typeof useChangeSavingsForm>['savingsFormState'];
-  annualRate?: MutatedSavings['annualRate'];
+  annualRate: MutatedSavings['annualRate'];
 };
 
-export function calculateSavings({ savingsFormState, annualRate = 0 }: Readonly<Props>) {
+export function calculateSavings({ savingsFormState, annualRate }: Readonly<Props>) {
   const { goalAmount, monthlyDeposit, savingsPeriod } = savingsFormState;
 
   const g = Number(goalAmount);
