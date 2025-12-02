@@ -3,10 +3,11 @@ import { useSelectSavings } from '../../../hooks/useSelectSavings';
 import { calculateSavings } from '../../../utils/calculateSavings';
 import { SavingsListItem } from '../../list/SavingsListItem';
 import { RecommendSavingsList } from '../../list/RecommendSavingsList';
-import { useChangeSavingsForm } from '../../../hooks/useChangeSavingsForm';
+import { SavingsFormState } from '../../../types/SavingsFormState.types';
 
-type Props = Pick<ReturnType<typeof useChangeSavingsForm>, 'savingsFormState'> &
-  Pick<ReturnType<typeof useSelectSavings>, 'selectedSavings'>;
+type Props = {
+  savingsFormState: SavingsFormState;
+} & Pick<ReturnType<typeof useSelectSavings>, 'selectedSavings'>;
 
 export function SavingsResultTabContent({ selectedSavings, savingsFormState }: Readonly<Props>) {
   const hasSelected = selectedSavings !== null;

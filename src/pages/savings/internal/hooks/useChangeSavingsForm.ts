@@ -1,26 +1,21 @@
 import { useReducer } from 'react';
-
-type FormState = {
-  goalAmount: string;
-  monthlyDeposit: string;
-  savingsPeriod: 6 | 12 | 24;
-};
+import { SavingsFormState } from '../types/SavingsFormState.types';
 
 type FormAction =
   | {
       type: 'GOAL_AMOUNT';
-      payload: FormState['goalAmount'];
+      payload: SavingsFormState['goalAmount'];
     }
   | {
       type: 'MONTHLY_DEPOSIT';
-      payload: FormState['monthlyDeposit'];
+      payload: SavingsFormState['monthlyDeposit'];
     }
   | {
       type: 'SAVINGS_PERIOD';
-      payload: FormState['savingsPeriod'];
+      payload: SavingsFormState['savingsPeriod'];
     };
 
-function formReducer(state: FormState, action: FormAction): FormState {
+function formReducer(state: SavingsFormState, action: FormAction): SavingsFormState {
   switch (action.type) {
     case 'GOAL_AMOUNT':
       return {
@@ -42,7 +37,7 @@ function formReducer(state: FormState, action: FormAction): FormState {
   }
 }
 
-const initialState: FormState = {
+const initialState: SavingsFormState = {
   goalAmount: '',
   monthlyDeposit: '',
   savingsPeriod: 12,

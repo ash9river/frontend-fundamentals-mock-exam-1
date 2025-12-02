@@ -1,8 +1,8 @@
 import { MutatedSavings } from '@domains/savings';
-import { useChangeSavingsForm } from '../hooks/useChangeSavingsForm';
+import { SavingsFormState } from '../types/SavingsFormState.types';
 
 type Props = {
-  savingsFormState: ReturnType<typeof useChangeSavingsForm>['savingsFormState'];
+  savingsFormState: SavingsFormState;
   annualRate: MutatedSavings['annualRate'];
 };
 
